@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: knative-event-producer
+spec:
+  template:
+    spec:
+      containers:
+        - image: salaboy/knative-event-producer
+          env:
+            - name: SINK_HOST
+              value: knative-hello-world.default.<REPLACE EXTERNAL IP>.xip.io
