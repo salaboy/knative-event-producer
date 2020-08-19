@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - image: salaboy/knative-event-producer
+        - image: salaboy/knative-event-producer:v2
           env:
-            - name: SINK_HOST
-              value: knative-hello-world.default.<REPLACE EXTERNAL IP>.xip.io
+            - name: K_SINK
+              value: http://broker-ingress.knative-eventing.svc.cluster.local/default/default

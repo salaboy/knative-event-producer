@@ -1,0 +1,9 @@
+apiVersion: serving.knative.dev/v1
+kind: ContainerSource
+metadata:
+  name: my-container-source-for-ce
+spec:
+  template:
+    spec:
+      containers:
+        - image: salaboy/knative-event-producer:v2
